@@ -1,0 +1,14 @@
+/ {
+	chosen {
+		zephyr,canbus = &can1;
+	};
+};
+
+&i2c1 {
+	status = "disabled";
+};
+
+&can1 {
+	bitrate = <500000>;
+	status = "okay";
+};
