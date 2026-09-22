@@ -33,11 +33,13 @@ int main(void)
 	}
 
 	ret = can_start(can_dev);
-    
+
 	if (ret != 0) {
 		printk("can_start failed: %d\n", ret);
 		return 0;
 	}
+
+	printk("CAN started\n");
 
 	while (1) {
 		ret = can_send(can_dev, &frame, K_MSEC(100), NULL, NULL);
