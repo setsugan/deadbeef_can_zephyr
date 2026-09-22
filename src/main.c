@@ -50,7 +50,7 @@ int main(void)
 			printk("can_send failed: %d\n", ret);
 		}
 
-		k_sleep(K_SECONDS(1));
+		k_sleep(K_MSEC(100));
 	}
 
 	return 0;
